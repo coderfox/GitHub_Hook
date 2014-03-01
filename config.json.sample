@@ -1,0 +1,36 @@
+{
+  "repos": {
+    /*Project name*/ "Example": {
+    	/*
+    	 * Weibo Message
+    	 * %committer committer
+    	 * %branch branch
+    	 * %sha1 sha1
+    	 * %message_1 line 1 of the message
+    	 * %message message , "\n" is replaced by ","
+    	 * %url url
+    	 */
+      "commit": "#Exmaple# %committer - [ %branch - %sha1 ] %message_1 < %url >",
+      "sha1": 10 /*sha1 length*/
+    }
+  },
+  /*Weibo Sender user info*/
+  "senders": [
+    {
+    /*username*/
+      "name": "i@example.com",
+      /*Password*/
+      "password": "**********",
+      /*App Key*/
+      "key": 123456,
+      /*App Secret*/
+      "secret": "abcdef",
+      /*redirect_uri*/
+      "uri": "http://cotr.me/"
+    }
+  ],
+  "users": {
+  /*GitHub username -- Sina UID*/
+    "coderfox": 1742617142
+  }
+}
