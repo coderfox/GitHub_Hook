@@ -3,12 +3,6 @@
     /*Project name*/ "Example": {
     	/*
     	 * Weibo Message
-    	 * %committer committer
-    	 * %branch branch
-    	 * %sha1 sha1
-    	 * %message_1 line 1 of the message
-    	 * %message message , "\n" is replaced by ","
-    	 * %url url
     	 */
       "commit": "#Exmaple# %committer - [ %branch - %sha1 ] %message_1 < %url >",
       "sha1": 10 /*sha1 length*/
