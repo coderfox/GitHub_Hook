@@ -32,7 +32,7 @@ try{
                     '%branch' => $json[ 'ref' ] , 
                     '%url' => $value[ 'url' ] , 
                     '%message_1' => preg_replace( '/\n.*/' , '' , $value[ 'message' ] ) , 
-                    '%message' => str_replace( '\n' , ' , ' , $value[ 'message' ] ) , 
+                    '%message' => str_replace( "\n" , ' , ' , $value[ 'message' ] ) , 
                     '%committer' => $c_uname , 
                     '%sha1' => substr( $value[ 'id' ] , 0 , $config[ 'repos' ][ $repo ][ 'sha1' ] ) , 
                     '%author' => $a_uname 
@@ -40,7 +40,8 @@ try{
             foreach( $params as $key => $value1 ){
                 $weibo = str_replace( $key , $value1 , $weibo );
             }
-            foreach( $config[ 'senders' ] as $value2 ){
+            foreach( $config[ $repo ][ 'senders' ] as $value3 ){
+                $value2 = $config[ 'senders' ][ $value3 ];
                 $sina = new WeiboPHP( $value2[ 'name' ] , $value2[ 'password' ] , $value2[ 'key' ] , $value2[ 'secret' ] , $value2[ 'uri' ] );
                 var_dump( $sina -> HTTPPost( 'statuses/update.json' , array( 
                         'status' => $weibo 
