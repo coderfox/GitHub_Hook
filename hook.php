@@ -40,7 +40,7 @@ try{
             foreach( $params as $key => $value1 ){
                 $weibo = str_replace( $key , $value1 , $weibo );
             }
-            foreach( $config[ $repo ][ 'senders' ] as $value3 ){
+            foreach( $config[ 'repos' ][ $repo ][ 'senders' ] as $value3 ){
                 $value2 = $config[ 'senders' ][ $value3 ];
                 $sina = new WeiboPHP( $value2[ 'name' ] , $value2[ 'password' ] , $value2[ 'key' ] , $value2[ 'secret' ] , $value2[ 'uri' ] );
                 var_dump( $sina -> HTTPPost( 'statuses/update.json' , array( 
