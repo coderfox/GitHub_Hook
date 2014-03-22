@@ -1,30 +1,25 @@
 {
   "repos": {
-    /*Project name*/ "Example": {
-    	/*
-    	 * Weibo Message
-    	 */
-      "commit": "#Exmaple# %committer - [ %branch - %sha1 ] %message_1 < %url >",
-      "sha1": 10 /*sha1 length*/
+    "GitHub_Hook": {
+      "create": "#GitHub##WebHook# %sender - Created < %type > - %ref",
+      "release": "#GitHub##WebHook# %sender - Released < %tag > : %title < %url >",
+      "commit": "#GitHub##WebHook# %committer - [ %branch - %sha1 ] %message < %url > via @小傅Fox",
+      "sha1": 10,
+      "senders": [
+        0
+      ]
     }
   },
-  /*Weibo Sender user info*/
   "senders": [
     {
-    /*username*/
-      "name": "i@example.com",
-      /*Password*/
-      "password": "**********",
-      /*App Key*/
-      "key": 123456,
-      /*App Secret*/
-      "secret": "abcdef",
-      /*redirect_uri*/
-      "uri": "http://cotr.me/"
+      "name": "*********************",
+      "password": "**************************",
+      "key": ***************,
+      "secret": "*****************************",
+      "uri": "http://**********************************"
     }
   ],
   "users": {
-  /*GitHub username -- Sina UID*/
     "coderfox": 1742617142
   }
 }
